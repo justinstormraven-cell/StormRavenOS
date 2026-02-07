@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj": {}
+    "c:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj": {
+    "c:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
+        "projectUniqueName": "c:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
         "projectName": "StormRaven.Kernel",
-        "projectPath": "C:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
+        "projectPath": "c:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
         "packagesPath": "C:\\Users\\faith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\obj\\",
+        "outputPath": "c:\\Users\\faith\\Desktop\\StormRavenOS\\StormRaven.Kernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\faith\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -66,10 +66,6 @@
               "version": "[8.0.23, 8.0.23]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[8.0.23, 8.0.23]"
             },
@@ -78,15 +74,7 @@
               "version": "[8.0.23, 8.0.23]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.23, 8.0.23]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[8.0.23, 8.0.23]"
             }
           ],
@@ -96,11 +84,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

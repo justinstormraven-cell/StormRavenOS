@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StormRaven.Shell")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d459d077db9499db21d4ab41e81fb6615cfdc18a")]
 [assembly: System.Reflection.AssemblyProductAttribute("StormRaven.Shell")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StormRaven.Shell")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

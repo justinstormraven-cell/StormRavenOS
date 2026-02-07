@@ -51,7 +51,7 @@ namespace StormRaven.Shell.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/StormRaven.Shell;component/views/quickpanel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/StormRaven.Shell;V1.0.0.0;component/views/quickpanel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\QuickPanel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
