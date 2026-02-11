@@ -120,8 +120,20 @@ namespace StormRaven.Kernel
         {
             if (!LogToEventLog(message, EventLogEntryType.Error))
             {
+                TryAppendFallbackLog(message);
+            }
+        }
+
+        private void TryAppendFallbackLog(string message)
+        {
+            try
+            {
                 var logPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "KernelService.log");
                 File.AppendAllText(logPath, $"[{DateTime.UtcNow:O}] {message}{Environment.NewLine}");
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError($"Failed to write to fallback log file: {ex}");
             }
         }
 
