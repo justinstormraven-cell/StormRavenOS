@@ -150,7 +150,7 @@ try {
 }
 catch {
     $summary.status = 'failed'
-    Write-Error "[Compile-AndSign] Critical failure: $($_.Exception.Message)"
+    Write-Error "[Compile-AndSign] Critical failure: $($_.Exception.Message)" -ErrorAction Continue
     Write-BuildSummary
     exit 1
 }
