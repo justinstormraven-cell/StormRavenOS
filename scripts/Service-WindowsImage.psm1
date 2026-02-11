@@ -150,8 +150,24 @@ function Register-OfflineServiceDeterministic {
         [hashtable]$ServiceModel
     )
 
+    # Determine the active control set selected for this offline SYSTEM hive.
+    $selectKeyPath = Join-Path $MountedSystemHiveRoot 'Select'
+    if (-not (Test-Path -LiteralPath $selectKeyPath)) {
+        throw "Offline SYSTEM hive Select key not found: $selectKeyPath"
+    }
+
+    $selectValues = Get-ItemProperty -LiteralPath $selectKeyPath
+    if (-not ($selectValues.PSObject.Properties.Name -contains 'Current')) {
+        throw "Offline SYSTEM hive Select\\Current value is missing at '$selectKeyPath'."
+    }
+
+    $currentControlSet = [int]$selectValues.Current
+    if ($currentControlSet -le 0) {
+        throw "Offline SYSTEM hive Select\\Current value is invalid ($currentControlSet) at '$selectKeyPath'."
+    }
+
     # Deterministic offline registration equivalent to CreateService defaults for own-process services.
-    $servicesRoot = Join-Path $MountedSystemHiveRoot 'ControlSet001\Services'
+    $servicesRoot = Join-Path $MountedSystemHiveRoot ('ControlSet{0:D3}\\Services' -f $currentControlSet)
     if (-not (Test-Path -LiteralPath $servicesRoot)) {
         throw "Offline SYSTEM hive services root not found: $servicesRoot"
     }
