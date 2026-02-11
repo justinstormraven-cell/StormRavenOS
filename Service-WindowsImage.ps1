@@ -22,8 +22,8 @@ function Service-WindowsImage {
         Mount-WindowsImage -ImagePath $ImagePath -Index $Index -Path $MountPath -ErrorAction Stop
         $mountSucceeded = $true
 
-        $softwareHiveName = 'HKLM\\StormRaven_SOFTWARE'
-        $systemHiveName = 'HKLM\\StormRaven_SYSTEM'
+        $softwareHiveName = 'HKLM\StormRaven_SOFTWARE'
+        $systemHiveName = 'HKLM\StormRaven_SYSTEM'
         $softwareHivePath = Join-Path -Path $MountPath -ChildPath 'Windows\\System32\\config\\SOFTWARE'
         $systemHivePath = Join-Path -Path $MountPath -ChildPath 'Windows\\System32\\config\\SYSTEM'
 
