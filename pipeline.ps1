@@ -101,6 +101,7 @@ function Invoke-PreFlightValidation {
     Write-Verbose "Validating run-scoped artifacts under '$($script:PipelineState.RunRoot)'"
 
     foreach ($mountPath in @($script:PipelineState.OwnedMountPaths)) {
+        $shouldUnregisterMount = $false
         try {
             if (-not (Test-Path -LiteralPath $mountPath)) {
                 Unregister-OwnedMount -Path $mountPath
@@ -109,21 +110,32 @@ function Invoke-PreFlightValidation {
 
             if ($PSCmdlet.ShouldProcess($mountPath, 'Dismount run-owned Windows image')) {
                 Dismount-WindowsImage -Path $mountPath -Discard -ErrorAction Stop
+                $shouldUnregisterMount = $true
             }
         }
         finally {
-            Unregister-OwnedMount -Path $mountPath
+            if ($shouldUnregisterMount) {
+                Unregister-OwnedMount -Path $mountPath
+            }
         }
     }
 
     foreach ($hiveName in @($script:PipelineState.OwnedRegistryHives)) {
+        $shouldUnregisterHive = $false
         try {
             if ($PSCmdlet.ShouldProcess($hiveName, 'Unload run-owned registry hive')) {
                 reg.exe unload "HKLM\\$hiveName" | Out-Null
+                if ($LASTEXITCODE -ne 0) {
+                    throw "Failed to unload registry hive 'HKLM\\$hiveName' (reg.exe exit code: $LASTEXITCODE)."
+                }
+
+                $shouldUnregisterHive = $true
             }
         }
         finally {
-            Unregister-OwnedRegistryHive -HiveName $hiveName
+            if ($shouldUnregisterHive) {
+                Unregister-OwnedRegistryHive -HiveName $hiveName
+            }
         }
     }
 
