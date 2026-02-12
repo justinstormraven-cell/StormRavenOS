@@ -1,4 +1,4 @@
-# StormRaven OS
+# StormRavenOS
 
 ## Offline service registration
 
