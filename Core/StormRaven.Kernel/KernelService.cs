@@ -12,7 +12,7 @@ namespace StormRaven.Kernel
     {
         private const int DefaultPollingIntervalMs = 5000;
         private const int MinPollingIntervalMs = 1000;
-        private const int StopWaitTimeoutMs = 15000;
+        private const int StopWaitTimeoutMs = 15000; 
 
         private CancellationTokenSource _monitorCancellation;
         private Task _monitorTask;
