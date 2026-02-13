@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cauU/XgChCg=",
+  "dgSpecHash": "MlJrusvzTNc=",
   "success": true,
-  "projectFilePath": "A:\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
+  "projectFilePath": "A:\\Scratch\\Dist\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faith\\.nuget\\packages\\microsoft.data.sqlite\\8.0.0\\microsoft.data.sqlite.8.0.0.nupkg.sha512",
     "C:\\Users\\faith\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",

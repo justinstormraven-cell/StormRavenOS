@@ -328,11 +328,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
+      "projectUniqueName": "A:\\Scratch\\Dist\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
       "projectName": "StormRaven.Kernel",
-      "projectPath": "A:\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
+      "projectPath": "A:\\Scratch\\Dist\\StormRavenOS\\StormRaven.Kernel\\StormRaven.Kernel.csproj",
       "packagesPath": "C:\\Users\\faith\\.nuget\\packages\\",
-      "outputPath": "A:\\StormRavenOS\\StormRaven.Kernel\\obj\\",
+      "outputPath": "A:\\Scratch\\Dist\\StormRavenOS\\StormRaven.Kernel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -393,7 +393,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
